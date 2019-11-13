@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row text-center pt-3 pb-3 menu-choose">
+        <a href="./login" class="col-6 pt-3 pb-0 link-unstyled">
+            <span class="text-uppercase <% if (options.current_page && options.current_page == 'login') { %> active <% } %>">Connexion</span> 
+            <% if (options.current_page && options.current_page == 'login') { %>
+                <div class="menu-bot-bar mt-2"></div>
+            <% } %>
+        </a>
+        <a href="./register" class="col-6 pt-3 pb-0 link-unstyled">
+            <span class="text-uppercase <% if (options.current_page && options.current_page == 'register') { %> active <% } %>">Inscription</span> 
+            <% if (options.current_page && options.current_page == 'register') { %>
+                <div class="menu-bot-bar mt-2"></div>
+            <% } %>
+        </a>
+    </div>
+</div>
+
