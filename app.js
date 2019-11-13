@@ -7,6 +7,8 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
+let auth_obj = new (require('./model/Auth'))()
+
 
 // Config
 dotenv.config();
@@ -22,7 +24,11 @@ app.use(session({
     resave: true
 }))
 app.use(async (req, res, next) => {
-	req.io = io;
+    req.io = io;
+    
+    const logged = await auth_obj.isLogged(req);
+	req.logged = logged;
+    
     next();
 });
 
