@@ -1,0 +1,12 @@
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<% if( locals.options.assets && locals.options.assets.libs ) { %>
+    <% if(locals.options.assets.libs.includes('fontawesome')){ %> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> <% } %>
+    <% if(locals.options.assets.libs.includes('feather-icons')){ %> <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script> <% } %>
+    <% if(locals.options.assets.libs.includes('jquery')){ %> <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script> <% } %>
+    <% if(locals.options.assets.libs.includes('aos')){ %> <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <% } %>
+    <% if(locals.options.assets.libs.includes('dragscroll')){ %> <script src="https://cdn.jsdelivr.net/npm/dragscroll@0.0.8/dragscroll.min.js"></script> <% } %>
+    <% if(locals.options.assets.libs.includes('tippy')){ %> <script src="https://unpkg.com/tippy.js@4"></script> <% } %>
+    <% if(locals.options.assets.libs.includes('recaptcha')){ %> <script src="https://www.google.com/recaptcha/api.js" async defer></script> <% } %>
+    <% if(locals.options.assets.libs.includes('magnific-popup')){ %> <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.js"></script> <% } %>
+<% } %>
