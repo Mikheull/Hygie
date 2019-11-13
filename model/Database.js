@@ -2,9 +2,9 @@ const mysql = require('mysql2');
 
 export default () => {
     return mysql.createPool({
-        host: '188.166.3.111',
-        user: 'admin_hygie',
-        password: '7MQvNyz3pc',
-        database: 'admin_hygie',
+        host: process.env.SQL_HOST,
+        user: process.env.SQL_USER,
+        password: process.env.SQL_PWD,
+        database: process.env.SQL_TABLE,
     }).promise();
 };
