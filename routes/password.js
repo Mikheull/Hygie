@@ -1,14 +1,14 @@
 const router = require('express').Router();
 
 
-/* GET home page. */
+/* GET reset-password page. */
 router.get('/', async function(req, res, next) {
 	res.render('index', {
 		options: {
-			body: 'home/index.ejs',
-			current_page: 'home',
+			body: 'auth/reset-password.ejs',
+			current_page: 'reset-password',
 			assets: {
-				stylesheets: ['home'],
+				stylesheets: ['auth'],
 				online_stylesheets: [],
 				javascripts: [],
 				online_javascripts: [],

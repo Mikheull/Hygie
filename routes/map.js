@@ -1,16 +1,16 @@
 const router = require('express').Router();
 
 
-/* GET home page. */
+/* GET map page. */
 router.get('/', async function(req, res, next) {
 	res.render('index', {
 		options: {
-			body: 'home/index.ejs',
-			current_page: 'home',
+			body: 'map/index.ejs',
+			current_page: 'map',
 			assets: {
-				stylesheets: ['home'],
+				stylesheets: ['map'],
 				online_stylesheets: [],
-				javascripts: [],
+				javascripts: ['map'],
 				online_javascripts: [],
 				libs: ['jquery', 'fontawesome', 'feather-icons']
 			}

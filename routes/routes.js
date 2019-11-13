@@ -1,8 +1,15 @@
 const router = require('express').Router();
-let resolve = require('path').resolve
 
 
 router.use('/', require('./index') );
+router.use('/register', require('./register') );
+router.use('/login', require('./login') );
+router.use('/reset-password', require('./password') );
+router.use('/map', require('./map') );
+router.use('/questions', require('./questions') );
+router.use('/account', require('./account') );
+
+router.use('/app', require('./app') );
 
 
 router.use(function(req, res){

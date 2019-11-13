@@ -1,16 +1,16 @@
 const router = require('express').Router();
 
 
-/* GET home page. */
+/* GET account page. */
 router.get('/', async function(req, res, next) {
 	res.render('index', {
 		options: {
-			body: 'home/index.ejs',
-			current_page: 'home',
+			body: 'account/index.ejs',
+			current_page: 'account',
 			assets: {
-				stylesheets: ['home'],
+				stylesheets: ['account'],
 				online_stylesheets: [],
-				javascripts: [],
+				javascripts: ['account'],
 				online_javascripts: [],
 				libs: ['jquery', 'fontawesome', 'feather-icons']
 			}
