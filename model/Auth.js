@@ -13,12 +13,32 @@ class Auth {
     }
 
 
+    async getID(req) {
+        if(req.cookies.logged){
+            let email = req.cookies.email;
+            let password = req.cookies.password;
+
+            return this.db.query("SELECT * FROM users WHERE mail = ? AND password = ? AND enable = 1", [email, password])
+                .then(([rows]) => {
+                    return (rows.length == 0) ? false : rows[0]['ID'];
+                })
+                .catch(err => {
+                    console.log(err);
+                    return false;
+                });
+        }
+        
+        return false
+    }
+
+
     async mailExist(email) {
         return this.db.query("SELECT * FROM users WHERE mail = ? AND enable = 1", [email])
         .then(([rows]) => {
-            return true;
+            return (rows.length == 0) ? false : true;
         })
         .catch(err => {
+            console.log(err);
             return false;
         });
     }
@@ -39,9 +59,10 @@ class Auth {
     async login(email, password) {
         return this.db.query("SELECT * FROM users WHERE mail = ? AND password = ? AND enable = 1", [email, password])
         .then(([rows]) => {
-            return true;
+            return (rows.length == 0) ? false : true;
         })
         .catch(err => {
+            console.log(err);
             return false;
         });
     }

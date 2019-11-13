@@ -44,6 +44,8 @@ router.post('/', async function(req, res, next) {
 				let request = await auth_obj.register(firstname, lastname, email, password);
 				if(request !== false){
 					res.cookie('logged', true, {maxAge: Date.now() + (10 * 365 * 24 * 60 * 60)});
+					res.cookie('email', email, {maxAge: Date.now() + (10 * 365 * 24 * 60 * 60)});
+					res.cookie('password', password, {maxAge: Date.now() + (10 * 365 * 24 * 60 * 60)});
 					res.redirect('account');
 				}else{
 					res.send('erreur lors de l\'insertion');
