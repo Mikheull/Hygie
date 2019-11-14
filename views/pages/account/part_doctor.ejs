@@ -1,0 +1,22 @@
+<div class="card mt-5">
+    <div class="card-body">
+        <h5 class="card-title black-color d-flex justify-content-between">
+            <span>Mes médecin traitant</span>
+            <span class="edit-btn"><i class="far fa-edit"></i></span>
+        </h5>
+        <div class="view">
+            <%= myData.doctor %>
+        </div>
+
+        <div class="edit hide">
+            <form action="" method="post">
+                <label for="doctor">Docteur</label>
+                <div class="form-label-group">
+                    <textarea name="doctor" id="reason" cols="30" rows="10" class="form-control" required="" placeholder="Indiquer son nom, son adresse, son téléphone"></textarea>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit" name="save_doctor_btn">Enregistrer</button>
+            </form>
+        </div>
+    </div>
+</div>
