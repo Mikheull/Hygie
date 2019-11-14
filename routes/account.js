@@ -113,8 +113,19 @@ router.post('/', async function(req, res) {
 			res.send('mot de passe différent');
 		}
 
-	}
-	else {
+	/* POST save general account. */
+	}else if(req.body.save_doctor_btn == ''){
+			
+		let doctor = (req.body.doctor !== '' && req.body.doctor) ? req.body.doctor : null ;
+			
+		let request = await account_obj.updateAccount_doctor(req.myID, doctor);
+		if(request !== false){
+			res.redirect('account');
+		}else{
+			res.send('erreur lors de l\'update ');
+		}
+
+	} else {
 		res.send(req.body);
 	}
 });

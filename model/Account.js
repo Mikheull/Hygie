@@ -67,6 +67,18 @@ class Account {
             });
     }
 
+    async updateAccount_doctor(id, doctor) {
+        return this.db.query("UPDATE users SET doctor = ? WHERE ID = ?", [doctor, id])
+            .then(([rows]) => {
+                return true;
+            })
+            .catch(err => {
+                console.error(err);
+                return false;
+            });
+    }
+    
+
 
     async getUserAntecedents(id) {
 
