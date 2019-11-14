@@ -5,7 +5,7 @@
             <span class="edit-btn"><i class="far fa-edit"></i></span>
         </h5>
         <div class="view">
-            <p><%= (myData.gender) ? myData.gender : 'Sexe non spécifié' %></p>
+            <p><%= (myData.gender || myData.gender == 0) ? (myData.gender == 1) ? 'Homme' : 'Femme' : 'Sexe non spécifié' %></p>
             <p><%= (myData.height) ? myData.height : 'Taille non spécifiée' %></p>
             <p><%= (myData.weight) ? myData.weight : 'Poids non spécifié' %></p>
             <p><%= (myData.blood_group) ? myData.blood_group : 'Groupe sanguin non spécifié' %></p>
@@ -17,26 +17,26 @@
                 <label for="gender">Sexe</label>
                 <div class="form-label-group">
                     <select name="gender" id="gender">
-                        <option>Choisir son sexe</option>
+                        <option value="">Choisir son sexe</option>
                         <option value="0">Femme</option>
                         <option value="1">Homme</option>
                     </select>
                 </div>
 
                 <div class="form-label-group">
-                    <input type="number" id="height" name="height" class="form-control" value="<%= myData.height %>" required="">
+                    <input type="number" id="height" name="height" class="form-control" value="<%= myData.height %>">
                     <label for="height">Taille</label>
                 </div>
 
                 <div class="form-label-group">
-                    <input type="number" id="weight" name="weight" class="form-control" value="<%= myData.weight %>" required="">
+                    <input type="number" id="weight" name="weight" class="form-control" value="<%= myData.weight %>">
                     <label for="weight">Poids</label>
                 </div>
 
                 <label for="blood_group">Groupe sanguin</label>
                 <div class="form-label-group">
                     <select name="blood_group" id="blood_group">
-                        <option>Choisir un groupe sanguin</option>
+                        <option value="">Choisir un groupe sanguin</option>
                         <option value="a+">A+</option>
                         <option value="a-">A-</option>
                         <option value="b+">B+</option>
