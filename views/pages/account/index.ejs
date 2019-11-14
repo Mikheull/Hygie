@@ -17,12 +17,16 @@
         <div class="container">
             <div class="profil text-center mt-5 mb-5">
                 <img src="/images/accounts/user.png" alt="">
-                <div class="mt-3"> <h4>Jonh Doe</h4> </div>
+                <div class="mt-3"> <h4><%= myData.first_name %> <%= myData.last_name %></h4> </div>
                 <div> <span>Paris, France</span> </div>
             </div>
         </div>
 
-        <div class="tab-pane fade show active" id="profil" role="tabpanel" aria-labelledby="profil-tab">...</div>
-        <div class="tab-pane fade" id="antecedents" role="tabpanel" aria-labelledby="antecedents-tab">...</div>
+        <div class="tab-pane fade show active" id="profil" role="tabpanel" aria-labelledby="profil-tab">
+            <%- include('profil'); -%>
+        </div>
+        <div class="tab-pane fade" id="antecedents" role="tabpanel" aria-labelledby="antecedents-tab">
+            <%- include('antecedents'); -%>
+        </div>
     </div>
 </div>

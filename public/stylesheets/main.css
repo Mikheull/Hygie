@@ -12,10 +12,14 @@ body, html, textarea {font-family: canada-type-gibson, sans-serif;}
 }
 
 .body {height: 85%;overflow: scroll;}
+.f-body {height: 95%;overflow: scroll;}
 .primary-color {color: var(--primary-color);}
 .gray-color {color: var(--gray-color);}
 .black-color {color: var(--black-color);}
 
+.primary-bg {background: var(--primary-color);}
+.gray-bg {background: var(--gray-color);}
+.black-bg {background: var(--black-color);}
 
 
 /* Form  */

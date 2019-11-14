@@ -41,13 +41,15 @@
                     <div class="px__screen__frame" style="background-color: #FFF">
                         <%- include('components/_statusBar'); -%>
 
-                        <div class="body">
+                        <div class="body <% if( !locals.options.hide_nav ) { %> f-body <% } %>">
                             <% if( locals.options && locals.options.body ) { %>
                                 <%- include( 'pages/' + locals.options.body ); -%>
                             <% } %>
                         </div>
                     
-                        <%- include('components/_menuBar'); -%>
+                        <% if( !locals.options.hide_nav ) { %>
+                            <%- include('components/_menuBar'); -%>
+                        <% } %>
                     </div>
                 </div>
             </div>

@@ -7,6 +7,7 @@ router.get('/', async function(req, res, next) {
 		options: {
 			body: 'auth/reset-password.ejs',
 			current_page: 'reset-password',
+			hide_nav: true,
 			assets: {
 				stylesheets: ['auth'],
 				online_stylesheets: [],

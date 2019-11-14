@@ -15,6 +15,7 @@ router.get('/', async function(req, res, next) {
 		options: {
 			body: 'auth/login.ejs',
 			current_page: 'login',
+			hide_nav: true,
 			assets: {
 				stylesheets: ['auth'],
 				online_stylesheets: [],

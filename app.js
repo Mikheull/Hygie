@@ -29,11 +29,10 @@ app.use(async (req, res, next) => {
     
     const logged = await auth_obj.isLogged(req);
     req.logged = logged;
-    if(logged){
-        const myID = await auth_obj.getID(req);
-        req.myID = myID;
-        console.log(myID);
-    }
+    const myID = await auth_obj.getID(req);
+    req.myID = myID;
+    
+    
     next();
 });
 
