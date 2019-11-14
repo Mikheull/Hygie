@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const moment = require('moment');
 
 let conv_obj = new (require('../model/Conversation'))()
 let logged;
@@ -18,6 +19,7 @@ router.get('/', async function(req, res, next) {
 
 	res.render('index', {
 		myConvs: myConvs,
+		moment: moment,
 		options: {
 			body: 'questions/index.ejs',
 			current_page: 'questions',
@@ -63,6 +65,7 @@ router.get('/:id', async function(req, res, next) {
 		res.render('index', {
 			conv: getConv,
 			messages: messages,
+			moment: moment,
 			options: {
 				body: 'questions/conv.ejs',
 				current_page: 'questions',

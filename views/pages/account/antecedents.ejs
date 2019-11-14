@@ -1,41 +1,50 @@
-<div class="card">
+<div class="cst-card mt-5">
     <div class="card-body">
-        <h5 class="card-title black-color">Lister mes antécédents</h5>
-        <ul class="list-unstyled">
+        <h5 class="card-title black-color d-flex justify-content-between">
+            <span class="title">Lister mes antécédents</span>
+        </h5>
+
+        <div class="">
             <% myAntecedents.forEach(function(ante) { %>
-                <li>
-                    <span><%= ante.date %></span>
-                    <span><%= ante.location %></span>
-                    <span><%= ante.reason %></span>
-                </li>
+                <div>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-calendar-alt"></i> <span class="gray-color"> <%= moment(ante.date).format( 'DD/MM/YYYY') %></span></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span class="gray-color"> <%= ante.location %></span></li>
+                        <li><i class="fas fa-arrow-right"></i> <span class="gray-color"> <%= ante.reason %></span></li>
+                    </ul>
+                </div>
             <% }); %>
-        </ul>
+        </div>
     </div>
 </div>
 
 
 
-<div class="card mt-5">
+<div class="cst-card mt-5">
     <div class="card-body">
-        <h5 class="card-title black-color">Ajouter un antécédent</h5>
-        <form action="" method="post">
+        <h5 class="card-title black-color d-flex justify-content-between">
+            <span class="title">Ajouter un antécédent</span>
+        </h5>
 
-            <div class="form-label-group">
-                <input type="text" id="location" name="location" class="form-control">
-                <label for="location">Hôpital / Lieu</label>
-            </div>
-    
-            <div class="form-label-group">
-                <input type="date" id="date" name="date" class="form-control">
-                <label for="date">Date</label>
-            </div>
+        <div class="">
+            <form action="" method="post">
+                <div class="form-label-group">
+                    <input type="text" id="location" name="location" class="form-control">
+                    <label for="location">Hôpital / Lieu</label>
+                </div>
 
-            <label for="reason">Raison</label>
-            <div class="form-label-group">
-                <textarea name="reason" id="reason" cols="30" rows="10" class="form-control" required=""></textarea>
-            </div>
-    
-            <button class="btn btn-lg btn-primary btn-block" type="submit" name="save_btn">Enregistrer</button>
-        </form>
+                <div class="form-label-group">
+                    <input type="date" id="date" name="date" class="form-control">
+                    <label for="date">Date</label>
+                </div>
+
+                <label for="reason">Raison</label>
+                <div class="form-label-group">
+                    <textarea name="reason" id="reason" cols="30" rows="5" class="form-control" required=""></textarea>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit" name="save_btn">Enregistrer</button>
+            </form>
+        </div>
     </div>
 </div>

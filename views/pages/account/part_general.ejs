@@ -1,22 +1,22 @@
-<div class="card mt-5">
+<div class="cst-card mt-5" id="general">
     <div class="card-body">
         <h5 class="card-title black-color d-flex justify-content-between">
-            <span>Général</span>
+            <span class="title">Général</span>
             <span class="edit-btn"><i class="far fa-edit"></i></span>
         </h5>
         <div class="view">
-            <p><%= (myData.gender || myData.gender == 0) ? (myData.gender == 1) ? 'Homme' : 'Femme' : 'Sexe non spécifié' %></p>
-            <p><%= (myData.height) ? myData.height : 'Taille non spécifiée' %></p>
-            <p><%= (myData.weight) ? myData.weight : 'Poids non spécifié' %></p>
-            <p><%= (myData.blood_group) ? myData.blood_group : 'Groupe sanguin non spécifié' %></p>
+            <p><span class="mr-2 font-weight-bolder">Sexe : </span> <%= (myData.gender || myData.gender == 0) ? (myData.gender == 1) ? 'Homme' : 'Femme' : 'non spécifié' %></p>
+            <p><span class="mr-2 font-weight-bolder">Taille : </span> <%= (myData.height) ? myData.height : 'non spécifiée' %></p>
+            <p><span class="mr-2 font-weight-bolder">Poids : </span> <%= (myData.weight) ? myData.weight : 'non spécifié' %></p>
+            <p><span class="mr-2 font-weight-bolder">Groupe sanguin : </span> <%= (myData.blood_group) ? myData.blood_group : 'non spécifié' %></p>
         </div>
 
         <div class="edit hide">
             <form action="" method="post">
 
-                <label for="gender">Sexe</label>
-                <div class="form-label-group">
-                    <select name="gender" id="gender">
+                <div class="form-group">
+                    <label for="gender">Sexe</label>
+                    <select class="form-control" name="gender" id="gender">
                         <option value="">Choisir son sexe</option>
                         <option value="0">Femme</option>
                         <option value="1">Homme</option>
@@ -33,9 +33,9 @@
                     <label for="weight">Poids</label>
                 </div>
 
-                <label for="blood_group">Groupe sanguin</label>
-                <div class="form-label-group">
-                    <select name="blood_group" id="blood_group">
+                <div class="form-group">
+                    <label for="blood_group">Groupe sanguin</label>
+                    <select class="form-control" name="blood_group" id="blood_group">
                         <option value="">Choisir un groupe sanguin</option>
                         <option value="a+">A+</option>
                         <option value="a-">A-</option>
@@ -48,7 +48,14 @@
                     </select>
                 </div>
         
-                <button class="btn btn-lg btn-primary btn-block" type="submit" name="save_general_btn">Enregistrer</button>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-primary btn-block" type="submit" name="save_general_btn">Enregistrer</button>
+                    </div>
+                    <div class="col-6">
+                        <a href="" class="btn btn-dark btn-block" class="cancel-edit-btn">Annuler</a>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

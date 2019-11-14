@@ -14,6 +14,7 @@ body, html, textarea {font-family: canada-type-gibson, sans-serif;}
 .body {height: 85%;overflow: scroll;}
 .f-body {height: 95%;overflow: scroll;}
 .hide {display: none;}
+.cursor {cursor: pointer;}
 
 .primary-color {color: var(--primary-color);}
 .gray-color {color: var(--gray-color);}
@@ -22,9 +23,20 @@ body, html, textarea {font-family: canada-type-gibson, sans-serif;}
 .primary-bg {background: var(--primary-color);}
 .gray-bg {background: var(--gray-color);}
 .black-bg {background: var(--black-color);}
-.nav_active path {
-    fill:var(--primary-color);
-}
+.nav_active path {fill:var(--primary-color);}
+
+.cst-card-sm {border-radius: 6px;box-shadow: 0px 8px 22px 7px hsla(0, 0%, 0%, 0.05);padding: 10px 15px;}
+.cst-card-sm .lft {padding-top: 5px;padding-right: 10px;border-right: solid 2px #F4F4F6;}
+.cst-card-sm .rgt {margin-left: 5px;padding-top: 5px}
+.cst-card-sm .rgt input {width: 100%;border: none;}
+
+.cst-card {border-radius: 10px;box-shadow: 0px 8px 19px 5px hsla(0, 0%, 0%, 0.05);padding: 10px 15px;}
+.cst-card .card-title {border-bottom: solid 1px #F4F4F6 !important;padding-bottom: 10px;margin-bottom: 20px;}
+.cst-card .card-title .title {font-weight: 600;}
+.cst-card .card-title .edit-btn {cursor: pointer;}
+
+
+
 
 
 

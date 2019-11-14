@@ -1,6 +1,4 @@
-
-
-<div class="container carousel ml-3">
+<div class="container carousel">
     <div class="profil text-center mt-5 mb-5">
         <img class="rounded-circle" src="/images/accounts/user.png" alt="">
     </div>
@@ -11,19 +9,20 @@
         <img class="rounded-circle" src="/images/accounts/family_2.jpg" alt="">
     </div>
 </div>
+
+
 <div class="container">
-    <div class="input-group mb-3 div_home">
-        <a href="/urgences">
-            <div class="input-group-prepend">
-                <span class="input-group-text"> <img src="images/icon/hospital.svg" alt=""> </span>
-                Préparer mon entrée aux urgences
-              </div></a>
-        
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text"> <img src="images/icon/stéthoscope.svg" alt=""> </span>
+    <div class="cst-card-sm d-flex cursor mb-3" id="step-A" data-val="symptome">
+        <div class="lft"> <img src="images/icon/hospital.svg" alt=""> </div>
+        <div class="rgt text-center">
+            <span>Voici mes symptômes : Est-ce que c'est urgent ?</span>
         </div>
-        <button type="text" class="form-control" placeholder ="Salut ça va">Voici mes symptômes : Est ce que c'est urgent?</button>
-      </div>
+    </div>
+
+    <div class="cst-card-sm d-flex cursor" id="step-A" data-val="urgence">
+        <div class="lft"> <img src="images/icon/stéthoscope.svg" alt=""> </div>
+        <div class="rgt text-center">
+            <span>Je vais au urgence : préparer mon dossier</span>
+        </div>
+    </div>
 </div>

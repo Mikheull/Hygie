@@ -41,7 +41,7 @@ router.post('/', async function(req, res, next) {
 				res.cookie('logged', true, {maxAge: Date.now() + (10 * 365 * 24 * 60 * 60)});
 				res.cookie('email', email, {maxAge: Date.now() + (10 * 365 * 24 * 60 * 60)});
 				res.cookie('password', password, {maxAge: Date.now() + (10 * 365 * 24 * 60 * 60)});
-				res.redirect('account');
+				res.redirect('/');
 			}else{
 				res.send('erreur lors de la connexion');
 			}

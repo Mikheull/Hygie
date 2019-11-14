@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const QRCode = require('qrcode')
+const moment = require('moment');
 
 let account_obj = new (require('../model/Account'))()
 let logged;
@@ -21,6 +22,7 @@ router.get('/', async function(req, res, next) {
 	let qr = QRCode.toDataURL(process.env.URI + 'app/scan/' + req.myID, function (err, url) {
 		res.render('index', {
 			logged: logged,
+			moment: moment,
 			myData: myData,
 			myAntecedents: myAntecedents,
 			qrcode: url,
