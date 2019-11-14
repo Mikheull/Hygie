@@ -22,6 +22,11 @@ body, html, textarea {font-family: canada-type-gibson, sans-serif;}
 .primary-bg {background: var(--primary-color);}
 .gray-bg {background: var(--gray-color);}
 .black-bg {background: var(--black-color);}
+.nav_active path {
+    fill:var(--primary-color);
+}
+
+
 
 
 /* Form  */
@@ -276,7 +281,4 @@ body, html, textarea {font-family: canada-type-gibson, sans-serif;}
   .flex--right {
     justify-content: flex-end;
     padding-right:20px;
-  }
-  .nav_active svg{
-      fill:blue;
   }

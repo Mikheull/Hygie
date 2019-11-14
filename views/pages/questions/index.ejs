@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <form action="" method="post">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-bars"></i></span>
+            </div>
+            <input type="text" name="question" placeholder="Une question ?" class="form-control" required>
+        </div>
+    </form>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title black-color">Lister mes convs</h5>
+            <ul class="list-unstyled">
+                <% myConvs.forEach(function(conv) { %>
+                    <a href="./questions/<%= conv.ID %>" class="link-unstyled">
+                        <li>
+                            <span class="<%= (conv.status == 1) ? 'text-danger' : 'text-success' %>"><i class="fas fa-bars"></i></span>
+                            <span><%= conv.title %></span><br>
+                            <span><%= conv.creation_date %></span>
+                        </li>
+                    </a>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+

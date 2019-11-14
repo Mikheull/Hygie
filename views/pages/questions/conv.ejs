@@ -1,0 +1,46 @@
+<div class="container pt-3 pb-3 text-left">
+    <a href="/questions" class="link-unstyled"> <i class="far fa-times-circle fa-lg"></i> Fermer </a>
+</div>
+
+
+<div class="container text-center mt-4 mb-3">
+    <span class="text-black-50">Bienvenue au début de la conversation, commencez par poser votre question</span>
+</div>
+
+<div class="container">
+    <div class="center">
+        <div class="chat">
+            <div class="messages" id="chat">
+                <% messages.forEach(function(message) { %>
+                    <div class="message parker">
+                        <%- message.content %>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<% if(conv.status == 1) { %>
+    <div class="container text-center mt-4 mb-3">
+        <span class="text-danger">Cette conversation a été close !</span>
+    </div>
+<% }else{ %>
+    <div class="container mt-4">
+        <form action="" method="post">
+            <div class="form-label-group">
+                <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Votre message"></textarea>
+            </div>
+        
+            <button class="btn btn-lg btn-primary btn-block" type="submit" name="send_message">Envoyer</button>
+        </form>
+    </div>
+<% } %>
+
+
+
+<script>
+    var chat = document.getElementById('chat');
+    chat.scrollTop = chat.scrollHeight - chat.clientHeight;
+</script>
