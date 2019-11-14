@@ -1,1 +1,33 @@
-Barre nav
+
+<svg id="appbar" width="0" height="0" viewBox="0 0 72 36" xmlns="http://www.w3.org/2000/svg">
+    <clipPath id="appbar__cutout">
+      	<path d="M36 36C55.8823 36 72 19.8823 72 0V112H0V0C0 19.8823 16.1177 36 36 36Z" />
+    </clipPath>
+</svg>
+    
+
+<div class="appbar appbar__bottom appbar__bottom--center-cut mt-1">
+	<a href="/" class="appbar__bottom--fab appbar__bottom--fab-primary" title="add" aria-label="Add">
+		<img src="/images/navbar/home.svg" alt="">
+	</a>
+
+	<div  class="appbar__bottom--normal ml-2">
+		<a href="/map">
+			<svg class="<%= (options.current_page == 'map' ) ?  'nav_active': ''%>" id="Map" xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24"><g id="Icons_Nav_Map_-_Inactive" data-name="Icons/Nav/Map - Inactive" transform="translate(0 0)"><path id="Path" d="M19.8,9.3a8.752,8.752,0,0,1,.2,1.6,9.021,9.021,0,0,1-.9,4c-2,1.1-2.9.5-3.8-.2a2.6,2.6,0,0,0-2.6-.7,4.349,4.349,0,0,0-2.4,2.4,6.8,6.8,0,0,0-.3,3.5,8.427,8.427,0,0,1-5.1-2.4,4.142,4.142,0,0,0-.2-4.3,3.915,3.915,0,0,0-.8-1,1.1,1.1,0,0,1,.3-1.7A5.994,5.994,0,0,0,6.5,8.9C7.7,7.1,6.3,4.5,6,4a1.38,1.38,0,0,1-.3-.4A9.884,9.884,0,0,1,9,2.1,6.463,6.463,0,0,1,9.6,0,11,11,0,1,0,22,10.9a11.325,11.325,0,0,0-.6-3.6A15.583,15.583,0,0,1,19.8,9.3Z" transform="translate(0 2.1)" fill="#d0c9d6"/><path id="Shape" d="M5,12a.905.905,0,0,1-.7-.3C3.79,11.318,0,7.747,0,5A4.952,4.952,0,0,1,5,0a4.952,4.952,0,0,1,5,5c0,2.747-3.789,6.317-4.3,6.7A.9.9,0,0,1,5,12ZM5,3A2,2,0,1,0,7,5,2,2,0,0,0,5,3Z" transform="translate(11)" fill="#ece9f1"/></g></svg>
+		</a>
+		<a href="/questions">
+			<svg class="<%= (options.current_page == 'questions' ) ?  'nav_active': ''%>" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><g id="Groupe_2011" data-name="Groupe 2011" transform="translate(-99.997 -746)"><g id="Groupe_3" data-name="Groupe 3" transform="translate(99.997 746)"><g id="Groupe_2" data-name="Groupe 2"><path id="Tracé_1" data-name="Tracé 1" d="M24.9,22.639l-1.716-4.995a12.214,12.214,0,1,0-10.96,6.806h.019a12.263,12.263,0,0,0,5.4-1.265L22.642,24.9a1.794,1.794,0,0,0,.584.1A1.783,1.783,0,0,0,24.9,22.639Zm-1.473.789a.286.286,0,0,1-.308.071l-5.293-1.819a.741.741,0,0,0-.587.046,10.739,10.739,0,1,1,4.486-4.486.741.741,0,0,0-.046.587L23.5,23.121A.286.286,0,0,1,23.432,23.429Z" transform="translate(-0.003 0)" fill="#d0c9d6"/></g></g><g id="Groupe_7" data-name="Groupe 7" transform="translate(108.415 752.234)"><g id="Groupe_6" data-name="Groupe 6"><path id="Tracé_3" data-name="Tracé 3" d="M176.082,127.674a3.691,3.691,0,0,0-3.687,3.687.741.741,0,1,0,1.482,0,2.205,2.205,0,1,1,2.205,2.205.741.741,0,0,0-.741.741v3.023a.741.741,0,0,0,1.482,0v-2.356a3.688,3.688,0,0,0-.741-7.3Z" transform="translate(-172.395 -127.674)" fill="#d0c9d7"/></g></g></g></svg>     
+		</a>
+	</div>
+
+	<div class="appbar__bottom--cutout">
+	</div>
+
+	<div class="appbar__bottom--normal flex--right mr-2">
+		<a href="/suivi">
+			<svg class="<%= (options.current_page == 'suivi' ) ?  'nav_active': ''%>" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book-open" class="svg-inline--fa fa-book-open fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#d0c9d6" d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z"></path></svg>
+		<a href="/account">
+			<svg class="<%= (options.current_page == 'account' ) ?  'nav_active': ''%>" id="Groupe_2012" data-name="Groupe 2012" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path id="Shape" d="M12,24A12,12,0,1,1,24,12,12.014,12.014,0,0,1,12,24ZM12,2A9.985,9.985,0,0,0,5.3,19.4,4.967,4.967,0,0,1,10,16h4a4.968,4.968,0,0,1,4.7,3.4A9.986,9.986,0,0,0,12,2Z" fill="#d0c9d6"/><path id="Path" d="M4,0A4,4,0,0,0,0,4V5A4,4,0,0,0,8,5V4A4,4,0,0,0,4,0Z" transform="translate(8 5)" fill="#ece9f1"/></svg>      
+		</a>
+	</div>
+</div>

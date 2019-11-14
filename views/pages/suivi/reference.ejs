@@ -1,0 +1,9 @@
+<% if(fiche_id == 1) { %>
+    <%- include('templates/pas-urgent'); -%>
+<% } else if(fiche_id == 2) { %>
+    <%- include('templates/urgent'); -%>
+<% } else if(fiche_id == 3) { %>
+    <%- include('templates/rendez-vous'); -%>
+<% } else { %>
+    Template pas définie
+<% } %>

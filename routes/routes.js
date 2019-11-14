@@ -8,6 +8,7 @@ router.use('/reset-password', require('./password') );
 
 router.use('/map', require('./map') );
 router.use('/questions', require('./questions') );
+router.use('/suivi', require('./suivi') );
 router.use('/account', require('./account') );
 
 router.use('/app', require('./app') );

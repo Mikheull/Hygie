@@ -1,7 +1,10 @@
-<% if(logged == true) { %>
-    Index
-    <a href="account">Mon compte</a>
-    <a href="logout">Logout</a>
-<% }else{ %>
-    <a href="login">Login</a>
-<% } %>
+<div class="container">
+    <div class="col-6 offset-3 mt-5">
+        <h2 class="text-center brand">Hygie</h2>
+    </div>
+</div>
+
+
+
+<%- include('step_a'); -%>
+<%- include('step_b'); -%>

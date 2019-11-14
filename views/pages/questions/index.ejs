@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <form action="" method="post">
+        <div class="cst-card-sm d-flex">
+            <div class="lft"> <span><i class="fas fa-bars"></i></span> </div>
+            <div class="rgt">
+                <input type="text" name="question" placeholder="Une question ?" required>
+            </div>
+        </div>
+    </form>
+
+    <% myConvs.forEach(function(conv) { %>
+        <a href="./questions/<%= conv.ID %>" class="link-unstyled">
+            <div class="cst-card-sm d-flex">
+                <div class="lft"> <span class="<%= (conv.status == 1) ? 'text-danger' : 'text-success' %>"><i class="fas fa-bars"></i></span> </div>
+                <div class="rgt row">
+                    <span class="black-color"><%= conv.title %></span><br>
+                    <span class="black-color ml-3"><%= moment(conv.creation_date).format( 'DD MMM YYYY') %></span>    
+                </div>
+            </div>
+        </a>
+    <% }); %>
+</div>

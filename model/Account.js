@@ -34,6 +34,52 @@ class Account {
     }
 
 
+    async updateAccount_gen(id, gender, height, weight, blood_group) {
+        return this.db.query("UPDATE users SET gender = ?, height = ?, weight = ?, blood_group = ? WHERE ID = ?", [gender, height, weight, blood_group, id])
+            .then(([rows]) => {
+                return true;
+            })
+            .catch(err => {
+                console.error(err);
+                return false;
+            });
+    }
+
+    async updateAccount_pass(id, password) {
+        return this.db.query("UPDATE users SET password = ? WHERE ID = ?", [password, id])
+            .then(([rows]) => {
+                return true;
+            })
+            .catch(err => {
+                console.error(err);
+                return false;
+            });
+    }
+
+    async updateAccount_main(id, first_name, lastname, mail, telephone, adress, birdthay) {
+        return this.db.query("UPDATE users SET first_name = ?, last_name = ?, mail = ?, telephone = ?, adress = ?, birdthay = ? WHERE ID = ?", [first_name, lastname, mail, telephone, adress, birdthay, id])
+            .then(([rows]) => {
+                return true;
+            })
+            .catch(err => {
+                console.error(err);
+                return false;
+            });
+    }
+
+    async updateAccount_doctor(id, doctor) {
+        return this.db.query("UPDATE users SET doctor = ? WHERE ID = ?", [doctor, id])
+            .then(([rows]) => {
+                return true;
+            })
+            .catch(err => {
+                console.error(err);
+                return false;
+            });
+    }
+    
+
+
     async getUserAntecedents(id) {
 
         return this.db.query("SELECT * FROM antecedents WHERE user_id = ? AND enable = 1", [id])
@@ -58,6 +104,8 @@ class Account {
                 return false;
             });
     }
+
+    
 
     
 

@@ -1,0 +1,16 @@
+.carousel {
+    margin: 0 auto;
+    width:200px;
+    height: 300px;
+    display: relative;
+  }
+  .carousel img {
+    display: hidden; /* hide images until carousel prepares them */
+    cursor: pointer; /* not needed if you wrap carousel items in links */
+  }
+  .div_home{
+    border: solid 1px black;
+    line-height: 50px;
+    text-decoration:none;
+    color:black;
+  }

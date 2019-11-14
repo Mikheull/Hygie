@@ -1,18 +1,21 @@
 <div class="card" style="background: #353A50">
     <div class="card-body">
-        <h5 class="card-title text-light">Gérer ma famille</h5>
+        <h5 class="card-title text-light" style="font-weight: 600;">Gérer ma famille</h5>
         <ul class="d-flex list-unstyled">
-            <li class=""> 
+            <li class="text-center mr-3"> 
                 <img src="/images/accounts/family_1.jpg" alt="..." class="rounded-circle" width="48px">
-                <span>HHH</span>
+                <div class="mt-2 text-light">Jane</div>
             </li>
-            <li class=""> 
+            <li class="text-center mr-3"> 
                 <img src="/images/accounts/family_2.jpg" alt="..." class="rounded-circle" width="48px">
-                <span>HHH</span>
+                <div class="mt-2 text-light">Max</div>
             </li>
-            <li class=""> 
+            <li class="text-center mr-3"> 
                 <img src="/images/accounts/family_3.jpg" alt="..." class="rounded-circle" width="48px">
-                <span>HHH</span>
+                <div class="mt-2 text-light">Tony</div>
+            </li>
+            <li class="text-center mr-3 new-profil black-bg rounded-circle"> 
+                <a href="#" class="link-unstyled text-light"><i class="fas fa-plus"></i></a>
             </li>
         </ul>
         <p class="card-text gray-color">Gérer votre famille vous permet de créer un compte pour chaque membre de votre famille et de centraliser les informations.</p>
@@ -20,4 +23,19 @@
 </div>
 
 
-<img src="<%= qrcode %>" alt="">
+
+<%- include('part_compte'); -%>
+<%- include('part_password'); -%>
+<%- include('part_general'); -%>
+<%- include('part_medicament'); -%>
+<%- include('part_doctor'); -%>
+<%- include('part_vaccins'); -%>
+
+
+<div class="mt-3 container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <a href="./logout" class="btn btn-lg btn-danger">Déconnexion</a>
+        </div>
+    </div>
+</div>
