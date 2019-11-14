@@ -1,28 +1,10 @@
-<div class="container carousel">
-    <div class="profil text-center mt-5 mb-5">
-        <img class="rounded-circle" src="/images/accounts/user.png" alt="">
-    </div>
-    <div class="profil text-center mt-5 mb-5">
-        <img class="rounded-circle" src="/images/accounts/family_1.jpg" alt="">
-    </div>
-    <div class="profil text-center mt-5 mb-5">
-        <img class="rounded-circle" src="/images/accounts/family_2.jpg" alt="">
-    </div>
-</div>
-
-
 <div class="container">
-    <div class="cst-card-sm d-flex cursor mb-3" id="step-A" data-val="symptome">
-        <div class="lft"> <img src="images/icon/hospital.svg" alt=""> </div>
-        <div class="rgt text-center">
-            <span>Voici mes symptômes : Est-ce que c'est urgent ?</span>
-        </div>
-    </div>
-
-    <div class="cst-card-sm d-flex cursor" id="step-A" data-val="urgence">
-        <div class="lft"> <img src="images/icon/stéthoscope.svg" alt=""> </div>
-        <div class="rgt text-center">
-            <span>Je vais au urgence : préparer mon dossier</span>
-        </div>
+    <div class="col-6 offset-3 mt-5">
+        <h2 class="text-center brand">Hygie</h2>
     </div>
 </div>
+
+
+
+<%- include('step_a'); -%>
+<%- include('step_b'); -%>
