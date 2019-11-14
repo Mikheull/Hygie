@@ -37,7 +37,7 @@ router.get('/scan/:id', async function(req, res, next) {
 	let role = await account_obj.getInfo(req.myID, 'role');
 	let userData = await account_obj.getUserData(user_id);
 
-	if(role == 2){
+	if(role == 1){
 
 		res.render('index', {
 			options: {
