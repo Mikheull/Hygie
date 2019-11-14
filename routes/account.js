@@ -12,13 +12,13 @@ router.use(async (req, res, next) => {
 	next();
 });
 
+
 /* GET account page. */
 router.get('/', async function(req, res, next) {
 	let myData = await account_obj.getUserData(req.myID);
 	let myAntecedents = await account_obj.getUserAntecedents(req.myID);
-	console.log(myAntecedents);
 	
-	let qr = QRCode.toDataURL('http://localhost:3030/app/scan/' + req.myID, function (err, url) {
+	let qr = QRCode.toDataURL(process.env.URI + 'app/scan/' + req.myID, function (err, url) {
 		res.render('index', {
 			logged: logged,
 			myData: myData,

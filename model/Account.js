@@ -10,11 +10,11 @@ class Account {
 
         return this.db.query("SELECT * FROM users WHERE ID = ? AND enable = 1", [id])
             .then(([rows]) => {
-                return (rows.length == 0) ? null : rows[0][info];
+                return (rows.length == 0) ? [] : rows[0][info];
             })
             .catch(err => {
                 console.log(err);
-                return null;
+                return [];
             });
         
     }
@@ -24,11 +24,11 @@ class Account {
 
         return this.db.query("SELECT * FROM users WHERE ID = ? AND enable = 1", [id])
             .then(([rows]) => {
-                return (rows.length == 0) ? null : rows[0];
+                return (rows.length == 0) ? [] : rows[0];
             })
             .catch(err => {
                 console.log(err);
-                return null;
+                return [];
             });
         
     }
