@@ -1,3 +1,7 @@
 .profil img {width: 40%;}
 .profil h4 {color: var(--black-color);}
 .profil span {color: var(--gray-color);}
+
+
+.new-profil {width: 48px;height: 48px;padding-top: 5px;}
+.new-profil, .new-profil:visited, .new-profil:hover, .new-profil:active, .new-profil:focus, .new-profil:active:hover {font-size: 2em;}

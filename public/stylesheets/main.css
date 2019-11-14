@@ -13,6 +13,8 @@ body, html, textarea {font-family: canada-type-gibson, sans-serif;}
 
 .body {height: 85%;overflow: scroll;}
 .f-body {height: 95%;overflow: scroll;}
+.hide {display: none;}
+
 .primary-color {color: var(--primary-color);}
 .gray-color {color: var(--gray-color);}
 .black-color {color: var(--black-color);}
