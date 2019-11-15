@@ -1,0 +1,9 @@
+body{
+    background-color:white !important;
+}
+.col-right{
+    display:inline !important;
+}
+.card-template{
+    padding :1.25rem;
+}

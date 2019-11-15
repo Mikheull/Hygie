@@ -35,16 +35,14 @@ router.get('/', async function(req, res, next) {
 router.get('/scan/:id', async function(req, res, next) {
 	var user_id = req.params.id;
 	let role = await account_obj.getInfo(req.myID, 'role');
-	let userData = await account_obj.getUserData(user_id);
 
-	if(role == 1){
+	if(role == 2){
 
 		res.render('index', {
 			options: {
-				body: 'app/scan.ejs',
+				body: 'template/suivi.ejs',
 				current_page: 'app',
 				render_mode: 'dashboard',
-				userData: userData,
 				assets: {
 					stylesheets: ['app'],
 					online_stylesheets: [],

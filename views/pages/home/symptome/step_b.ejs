@@ -4,9 +4,11 @@
             <div class="cst-card-sm d-flex">
                 <div class="lft"> <img src="images/icon/stéthoscope.svg" alt=""> </div>
                 <div class="rgt">
-                    <input type="text" name="question" placeholder="Quel problème avez vous ?" required>
+                    <input type="text" name="question" placeholder="Quel problème avez vous ?" required id="inp-step-b-symp" data-val="symptome">
                 </div>
             </div>
         </form>
     </div>
 </div>
+
+<%- include('step_c'); -%>
