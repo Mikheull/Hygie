@@ -23,7 +23,6 @@
 <body>
 
     <% if(locals.options.render_mode && locals.options.render_mode == 'dashboard') { %>
-        <%- include('components/_dashboardBar'); -%>
     
         <% if( locals.options && locals.options.body ) { %>
             <%- include( 'pages/' + locals.options.body ); -%>

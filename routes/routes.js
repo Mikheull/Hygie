@@ -10,7 +10,7 @@ router.use('/map', require('./map') );
 router.use('/questions', require('./questions') );
 router.use('/suivi', require('./suivi') );
 router.use('/account', require('./account') );
-
+router.use('/template', require('./template') );
 router.use('/app', require('./app') );
 
 
