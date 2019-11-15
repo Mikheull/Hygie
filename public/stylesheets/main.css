@@ -25,7 +25,7 @@ body, html, textarea {font-family: canada-type-gibson, sans-serif;}
 .black-bg {background: var(--black-color);}
 .nav_active path {fill:var(--primary-color);}
 
-.cst-card-sm {border-radius: 6px;box-shadow: 0px 8px 22px 7px hsla(0, 0%, 0%, 0.05);padding: 10px 15px;}
+.cst-card-sm, .cst-card-sm:visited, .cst-card-sm:hover, .cst-card-sm:active, .cst-card-sm:focus, .cst-card-sm:active:hover {border-radius: 6px;box-shadow: 0px 8px 22px 7px hsla(0, 0%, 0%, 0.05);padding: 10px 15px;}
 .cst-card-sm .lft {padding-top: 5px;padding-right: 10px;border-right: solid 2px #F4F4F6;}
 .cst-card-sm .rgt {margin-left: 5px;padding-top: 5px}
 .cst-card-sm .rgt input {width: 160%;border: none;}
