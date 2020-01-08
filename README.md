@@ -16,7 +16,7 @@ When it's done, follow next steps.
 $ npm install
 ```
 
-Import the database (here)
+Import the database [(here)](https://github.com/Mikheull/Hygie/blob/master/uploads/admin_hygie.sql)
 
 Create `.env` file in root folder and write next lines :
 ```
