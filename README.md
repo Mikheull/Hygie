@@ -29,3 +29,7 @@ URI=http://localhost:3030/
 ```bash
 npm run start
 ```
+
+## Team
+[YassHouays](https://github.com/YassHouays)
+
