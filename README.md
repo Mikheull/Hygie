@@ -1,19 +1,16 @@
+# Hygie ![Issues](https://img.shields.io/github/issues/Mikheull/Hygie) ![GitHub last commit](https://img.shields.io/github/last-commit/Mikheull/Hygie)
 
-[![Coverage Status](https://coveralls.io/repos/github/Mikheull/Hygie/badge.svg?branch=master)](https://coveralls.io/github/Mikheull/Hygie?branch=master)
-[![Build Status](https://travis-ci.org/Mikheull/Hygie.svg?branch=master)](https://travis-ci.org/Mikheull/Hygie)
-
+This is an app to dispatch people in hospital
+<br>
+*This project was done in school (4th year)*
 
 ## Installation
 
-```
-$ git clone https://github.com/Mikheull/Hygie.git
-```
-When it's done, follow next steps.
+Use `git clone` to install this app.
 
-## Quick Start
-
-```
-$ npm install
+```bash
+git clone https://github.com/Mikheull/Hygie.git
+npm install
 ```
 
 Import the database [(here)](https://github.com/Mikheull/Hygie/blob/master/uploads/admin_hygie.sql)
@@ -26,14 +23,10 @@ SQL_PWD=root
 SQL_TABLE=hygie
 URI=http://localhost:3030/
 ```
-The **SQL_HOST** is the host of your database <br>
-The **SQL_USER** is the user of your database <br>
-The **SQL_PWD** is the password of your database <br>
-The **SQL_TABLE** is the table <br>
-The **URI** is the main url <br>
 
-```
-$ npm start
-```
+## Usage
 
-This webapp will be run on [http://localhost:3000](http://localhost:3000)
+```bash
+npm run start
+```
+The app will be run on port 3000
