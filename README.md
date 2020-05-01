@@ -29,4 +29,3 @@ URI=http://localhost:3030/
 ```bash
 npm run start
 ```
-The app will be run on port 3000
